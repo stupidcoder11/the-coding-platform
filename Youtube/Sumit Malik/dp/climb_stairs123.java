@@ -1,3 +1,7 @@
+/*  Author  :   Devesh
+    Motto   :   Regular code makes the road!
+    Link    :   */   
+
 import java.util.*;
 import java.io.*;
 
