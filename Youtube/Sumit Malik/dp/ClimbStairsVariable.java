@@ -1,4 +1,4 @@
-/*	Author	: Devesh
+/*  Author	: Devesh
     Motto	: Regular code makes the road!
     Link	: https://www.youtube.com/watch?v=uNqoQ0sNZCM&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=3	*/
 
