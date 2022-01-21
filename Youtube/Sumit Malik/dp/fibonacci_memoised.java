@@ -1,7 +1,9 @@
-// WAP to print the nth fibonacci considering 0th fibonacci as 0 and 1th fibonacci as 1
+/*	Author	: Devesh
+    Motto	: Regular code makes the road!
+    Link	: https://www.youtube.com/watch?v=94dfRrDANRY&list=PL-Jc9J83PIiG8fE6rj9F5a6uyQ5WPdqKy&index=2	*/
 
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 class fibonacci_memoised
 {
@@ -20,12 +22,21 @@ class fibonacci_memoised
 
     public static void main(String args[])throws Exception
     {
-        Scanner scn = new Scanner(System.in);
-        
-        int n = scn.nextInt();
+        try
+        {
+            BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+            Scanner scn = new Scanner(System.in);
 
-        int ans = fibbMemoised(n, new int[n+1]);
+            // Input goes here
+            int n = scn.nextInt();
 
-        System.out.println(ans);
+            int ans = fibbMemoised(n, new int[n+1]);
+
+            System.out.println(ans);
+
+            scn.close();
+            in.close();
+        }
+        catch(Exception e) { return; }
     }
 }
