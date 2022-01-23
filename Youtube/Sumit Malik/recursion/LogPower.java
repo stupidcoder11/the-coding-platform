@@ -11,12 +11,12 @@ class LogPower
     {
         if(n == 0)  return 1;
 
-        if((n&1) == 1) 
+        if((n&1) == 1)                                  // if n is odd
         {
             int xnm1 = getLogarithmicPower(x, n-1);     // obtain x^(n-1) and multiply it with x to get x^n
             return x*xnm1;
         }    
-        else
+        else                                            // if n is even
         {
             int xnm1b2 = getLogarithmicPower(x, n/2);   // obtain x^n/2 and multiply it with x^n/2 to get x^n
             return xnm1b2*xnm1b2;
