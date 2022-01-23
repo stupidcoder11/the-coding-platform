@@ -12,7 +12,7 @@ class PrintDecreasingIncreasing
         if(n == 0)  return;
 
         System.out.println(n);
-        pdi(n-1);                       //  This would print 1 to n-1 
+        pdi(n-1);                       //  This would print 1 to n-1  also suppose this would print n-1 to 1
         System.out.println(n);
     }
     public static void main(String args[])throws Exception
