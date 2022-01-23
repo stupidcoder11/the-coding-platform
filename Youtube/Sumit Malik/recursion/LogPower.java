@@ -11,10 +11,16 @@ class LogPower
     {
         if(n == 0)  return 1;
 
-        if((n&1) == 1)                               //  if n is odd  we compute x*(x^n-1)
-        return getLogarithmicPower(x, n-1)*x;
-
-        return getLogarithmicPower(x*x, n/2);       //   if n is even we compute (x*x)^(n/2)
+        if((n&1) == 1) 
+        {
+            int xnm1 = getLogarithmicPower(x, n-1);     // obtain x^(n-1) and multiply it with x to get x^n
+            return x*xnm1;
+        }    
+        else
+        {
+            int xnm1b2 = getLogarithmicPower(x, n/2);   // obtain x^n/2 and multiply it with x^n/2 to get x^n
+            return xnm1b2*xnm1b2;
+        }
     }
     public static void main(String args[])throws Exception
     {
