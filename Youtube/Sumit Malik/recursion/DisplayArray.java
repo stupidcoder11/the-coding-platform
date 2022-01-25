@@ -14,6 +14,7 @@ class DisplayArray
 
         System.out.println(arr[idx]);       //  This would explicitly print 0th index array element to generate final output
         recursiveShow(arr, idx+1);          //  Suppose this would print array elements starting from idx+1 till last index
+    }
     public static void main(String args[])throws Exception
     {
         try

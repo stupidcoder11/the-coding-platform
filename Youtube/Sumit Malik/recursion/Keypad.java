@@ -17,7 +17,7 @@ public class Keypad
             String s = scn.next();
             ArrayList<String> ans = getKPC(s);
             System.out.println(ans);
-            
+              
             in.close();
             scn.close();
         }
