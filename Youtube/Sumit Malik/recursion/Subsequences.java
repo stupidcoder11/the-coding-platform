@@ -19,11 +19,12 @@ class Subsequences
         ArrayList<String> list = gss(s.substring(1));   //  Suppose this will give the subsequences of smaller string
         
         ArrayList<String> ans = new ArrayList<>();
-        for(String itr : list)
-        {
+
+        for(String itr : list)                          
             ans.add(itr);                               //  Exclude starting character
-            ans.add(s.charAt(0)+itr);                   //  Include starting character
-        }
+        
+        for(String itr : list)
+            ans.add(s.charAt(0) + itr);                 //  Include starting character
         
         return ans;
     }
@@ -38,7 +39,7 @@ class Subsequences
             String str = in.readLine();
             ArrayList<String> list = gss(str);
 
-            System.out.println(list + "\n" + list.size());
+            System.out.println(list);
 
             scn.close();
             in.close();
