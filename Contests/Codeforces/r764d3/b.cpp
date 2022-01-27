@@ -12,7 +12,7 @@ void solve()
 {
 	int a, b, c;	cin >> a >> b >> c;
 	
-	int ea = 2*b-c;			//	Expected value of a
+	int ea = b-(c-b);			//	Expected value of a
 	
 	if(ea%a==0 && ea>=a) {
 		cout << "YES\n";
@@ -26,7 +26,7 @@ void solve()
 		return;
 	}
 	
-	int ec = 2*b-a;			//	Expected value of c
+	int ec = b-(a-b);			//	Expected value of c
 	
 	if(ec%c==0 && ec>=c) {
 		cout << "YES\n";
