@@ -1,3 +1,5 @@
+// https://codeforces.com/contest/1624/problem/B
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -10,39 +12,28 @@ void solve()
 {
 	int a, b, c;	cin >> a >> b >> c;
 	
-	int eb = (a+c)>>1;
-	int ea = 2*b-c;
-	int ec = 2*b-a;
+	int ea = 2*b-c;			//	Expected value of a
 	
-	if((a+c)&1)			// if expected b is non-integer
-	{
-		// cout << "ODD extreme\n";
-		// dbg(ea);
-		// cout << "eb : " << (a+b)/2.0 << "\n";
-		// dbg(ec);
-		if(ea%a == 0 && ea/a > 0)
-			cout << "YES\n";
-		else if(ec%c == 0 && ec/c > 0)
-			cout << "YES\n";
-		else
-			cout << "NO\n";
+	if(ea%a==0 && ea>=a) {
+		cout << "YES\n";
+		return;
 	}
-	else				// if expected b is integer
-	{
-		// cout << "EVEN extreme\n";
-		// dbg(ea);					
-		// dbg(eb);
-		// dbg(ec);
-		if(ea%a == 0 && ea/a > 0)
-			cout << "YES\n";
-		else if(ec%c == 0 && ec/c > 0)
-			cout << "YES\n";
-		else if(eb%b == 0 && eb/b > 0)
-			cout << "YES\n";
-		else
-			cout << "NO\n";
+	
+	int eb = a+(c-a)/2;		//	Expected value of b
+	
+	if(((a+c)&1)==0 && eb%b==0 && eb>=b) {
+		cout << "YES\n";
+		return;
 	}
-		
+	
+	int ec = 2*b-a;			//	Expected value of c
+	
+	if(ec%c==0 && ec>=c) {
+		cout << "YES\n";
+		return;
+	}
+	
+	cout << "NO\n";		
 }
 
 // .......................................................................................................
