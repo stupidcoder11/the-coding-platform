@@ -14,15 +14,9 @@ class PrintPermutations
             System.out.println(ans);
             return;
         }
-        for(int i=0; i<s.length(); i++)
-        {
-            if(i==0)                    // Selecting the first character
-            printPermutations(s.substring(i+1), ans+s.charAt(i));
-            else if(i==s.length()-1)    // Selecting the last character
-            printPermutations(s.substring(0, i), ans+s.charAt(i));
-            else                        // Selecting rest of the characters
-            printPermutations(s.substring(0, i)+s.substring(i+1), ans+s.charAt(i));
-        }
+        
+        for(int i=0; i<s.length(); i++) 
+        printPermutations(s.substring(0, i)+s.substring(i+1), ans+s.charAt(i));
     }
     public static void main(String args[])throws Exception
     {
