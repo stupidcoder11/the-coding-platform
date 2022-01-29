@@ -1,18 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
+typedef long long int ll;
+#define dbg(x)                  cout << #x << " : " << x << "\n";
+#define dbgarr(arr, n, idx)     for(int i=(int)idx; i<(int)n; i++)  cout << #arr << "[" << i << "] = " << arr[i] << "\n";
+
+void solve()
 {
-    // #ifndef ONLINE_JUDGE
-    // freopen("input.txt", "r", stdin); 
-    // freopen("error.txt", "w", stderr);
-    // freopen("output.txt", "w", stdout); 
-    // #endif
-    
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-    
     int t, l, r;
     set<int> s;
     cin >> t;
@@ -26,6 +20,13 @@ int main()
         cout << s.size() << "\n";
         s.clear();
     }
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);   cin.tie(0);
+    
+    solve();
 
     return 0;
 }
