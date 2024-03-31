@@ -6,19 +6,19 @@
 import java.util.*;
 
 class TargetSumSubsets {
-    public static void printSubsets(int numbers[], int size, int target, int index, int sum, ArrayList<Integer> subset) {
-        if(index == size) {
-            if(sum == target) {
+    public static void printSubsets(int numbers[], int size, int target, ArrayList<Integer> subset) {
+        if(size == 0) {
+            if(target == 0) {
                 System.out.println(subset);
             }
             return;
         }
         // pick up the element
-        subset.add(numbers[index]);
-        printSubsets(numbers, size, target, index+1, sum+numbers[index], subset);
+        subset.add(numbers[size-1]);
+        printSubsets(numbers, size-1, target-numbers[size-1], subset);
         // drop the element
         subset.remove(subset.size()-1);
-        printSubsets(numbers, size, target, index+1, sum, subset);
+        printSubsets(numbers, size-1, target, subset);
     }
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +31,7 @@ class TargetSumSubsets {
             int target = scanner.nextInt();
             // Solution function
             ArrayList<Integer> subset = new ArrayList<>();
-            printSubsets(numbers, size, target, 0, 0, subset);
+            printSubsets(numbers, size, target, subset);
         }
         catch(Exception e) {
             System.out.println(e);
